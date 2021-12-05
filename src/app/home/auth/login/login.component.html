@@ -1,0 +1,40 @@
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+  <ion-toolbar mode="md">
+    <ion-title color="primary" size="large">
+      <h2 style="font-weight: bold;">SIGN IN</h2>
+    </ion-title>
+  </ion-toolbar>
+  <ion-item-divider mode="md">
+  </ion-item-divider>
+  <ion-item size="small" class="ion-border" mode="md">
+    <ion-label mode="md" autocomplete="off" position="floating">Username</ion-label>
+    <ion-input mode="md" clearInput="true" name="username"  type="email" ngModel required></ion-input>
+  </ion-item>
+
+  <ion-item mode="md">
+    <ion-icon slot="end" color="primary" class="ion-align-self-center passIcon"
+      [name]="showhide ? 'eye' : 'eye-off-outline' " (click)="passwordShow()"></ion-icon>
+    <ion-label mode="md" position="floating">Password</ion-label>
+    <ion-input mode="md" autocomplete="name" [type]=" showhide ? 'password' : 'text' " clearInput="true" name="password" ngModel required>
+    </ion-input>
+  </ion-item>
+  <ion-button expand="block" mode="md" type="submit" size="default" style="font-weight: bold;"
+    class="ion-margin-top ion-margin-bottom">SIGN IN</ion-button>
+  <ion-text color="secondary" style="cursor: pointer;display:block;font-weight: 600;margin-bottom: 15px;">
+    <a style="text-decoration: none;color: #6987b2; " [routerLink]="['/forget-password']">Forgot your password?</a>
+  </ion-text>
+  <ion-item-divider type="md">
+  </ion-item-divider>
+  <ion-toolbar>
+    <ion-title color="primary" size="large" mode="md">
+      <h2 style="font-weight: bold;">NEW USER?</h2>
+    </ion-title>
+  </ion-toolbar>
+  <ion-button expand="block" mode="md" type="button" [routerLink]="['/register']" color="danger" size="default"
+    class="ion-margin-top ion-margin-bottom " style="font-weight: bold;">SIGN UP</ion-button>
+  <ion-item-divider type="md">
+  </ion-item-divider>
+  <ion-text color="primary" style="cursor: pointer;margin-top: 30px;display: block;font-weight: 600;">
+    <a style="text-decoration: none; " [routerLink]="['/tracking']">Track your order?</a>
+  </ion-text>
+</form> 

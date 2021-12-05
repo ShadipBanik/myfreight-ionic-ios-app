@@ -1,0 +1,19 @@
+
+<form #searchForm="ngForm" (ngSubmit)="submitForm(searchForm.value)">
+  <ion-toolbar mode="md">
+    <ion-title color="primary" mode="md">
+      <h3 style="font-weight: bold;">Track by tracking code</h3>
+    </ion-title>
+  </ion-toolbar>
+  <ion-item-divider mode="md">
+  </ion-item-divider>
+  <ion-item size="small" class="ion-border" mode="md">
+    <ion-label mode="md" autocomplete="off"position="floating">Input your order number here</ion-label>
+    <ion-input mode="md" clearInput="true" type="text" name="orderNumber" ngModel required></ion-input>
+  </ion-item>
+
+  <ion-button  mode="md"  type="submit" size="default" style="font-weight: bold;"
+    class="ion-margin-top ion-margin-bottom" [disabled]="!searchForm.valid">GO</ion-button>
+   
+
+</form>

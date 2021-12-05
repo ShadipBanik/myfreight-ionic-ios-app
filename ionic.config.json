@@ -1,5 +1,7 @@
 {
   "name": "my-freight",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

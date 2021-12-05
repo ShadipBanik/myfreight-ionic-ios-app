@@ -1,0 +1,53 @@
+<form>
+<ion-toolbar mode="md">
+  <ion-title color="primary" size="large">
+    <h2 style="font-weight: bold;">NEW USER</h2>
+  </ion-title>
+</ion-toolbar>
+<ion-item-divider  mode="md">
+</ion-item-divider>
+<ion-item size="small" class="ion-border" mode="md">
+  <ion-label mode="md" autocomplete="off"  position="floating" >First Name</ion-label>
+  <ion-input mode="md" clearInput="true" type="text" ></ion-input>
+</ion-item>
+<ion-item size="small" class="ion-border" mode="md">
+  <ion-label mode="md" autocomplete="off" position="floating" >Last Name</ion-label>
+  <ion-input mode="md" clearInput="true" type="text" required></ion-input>
+</ion-item>
+<ion-item size="small" class="ion-border" mode="md">
+  <ion-label mode="md" autocomplete="off" position="floating" >Username</ion-label>
+  <ion-input mode="md" clearInput="true" type="text" required></ion-input>
+</ion-item>
+<ion-item size="small" class="ion-border" mode="md">
+  <ion-label mode="md" autocomplete="off" position="floating" >Contact Number</ion-label>
+  <ion-input mode="md" clearInput="true"  type="number" size="small" required></ion-input>
+</ion-item>
+<ion-item size="small" class="ion-border" mode="md">
+  <ion-label mode="md" autocomplete="off"  position="floating" >Email</ion-label>
+  <ion-input mode="md" clearInput="true" type="email" size="small" required></ion-input>
+</ion-item>
+<ion-item   mode="md">
+  <ion-icon slot="end" color="primary"  class="ion-align-self-center passIcon" [name]="showhide ? 'eye' : 'eye-off-outline' " (click)="passwordShow()" ></ion-icon>
+  <ion-label mode="md" position="floating">Password</ion-label>
+  <ion-input mode="md"  autocomplete="name" [type]=" showhide ? 'password' : 'text' " clearInput="true" required></ion-input>
+</ion-item>
+<ion-item   mode="md">
+  <ion-icon slot="end" color="primary"  class="ion-align-self-center" [name]="confirmPassShowHide ? 'eye' : 'eye-off-outline' " (click)="confirmPasswordShow()" ></ion-icon>
+  <ion-label mode="md" position="floating">Confirm Password</ion-label>
+  <ion-input mode="md"  autocomplete="name"  [type]=" confirmPassShowHide ? 'password' : 'text' " clearInput="true" required></ion-input>
+</ion-item>
+<ion-button expand="block" mode="md"  size="default" style="font-weight: bold;" type="submit" class="ion-margin-top ion-margin-bottom">SIGN UP</ion-button>
+<ion-item-divider  type="md">
+</ion-item-divider>
+<ion-toolbar>
+  <ion-title color="primary" size="large" mode="md">
+    <h2 style="font-weight: bold;">SIGN IN</h2>
+  </ion-title>
+</ion-toolbar>
+<ion-button expand="block" mode="md" [routerLink]="['/login']" color="danger" type="submit" size="default" class="ion-margin-top ion-margin-bottom " style="font-weight: bold;">SIGN IN</ion-button>
+<ion-item-divider  type="md">
+</ion-item-divider>
+<ion-text color="primary" style="cursor: pointer;margin-top: 30px;display: block;font-weight: 600;">
+  <a style="text-decoration: none; " [routerLink]="['/tracking']">Track your order?</a>
+</ion-text>
+</form>

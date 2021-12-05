@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  host: 'http://3.137.202.174:8080/myfreight/',
+  proxy: 'http://3.137.202.174:8080/myfreight/'
 };
 
 /*
